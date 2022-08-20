@@ -1,26 +1,26 @@
 import unittest
-from dad_functions import message
+from dad_functions import dad_message
 
 class MessageTest(unittest.TestCase):
 
     def test_hi(self):
-        result = message("hi")
+        result = dad_message("hi")
         self.assertEqual(False, result)
 
     def test_Hello(self):
-        result = message("Hello")
+        result = dad_message("Hello")
         self.assertEqual(True, result)
 
     def test_hello(self):
-        result = message("hello")
+        result = dad_message("hello")
         self.assertEqual(True, result)
 
     def test_heLLo(self):
-        result = message("heLLo")
+        result = dad_message("heLLo")
         self.assertEqual(True, result)
 
     def test_gello(self):
-        result = message("gello")
+        result = dad_message("gello")
         self.assertEqual(False, result)
 
 
