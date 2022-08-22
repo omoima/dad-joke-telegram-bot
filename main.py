@@ -3,7 +3,7 @@ from dad_functions import dad_message, dad_text
 import os
 
 default = "Type 'hello' to receive a dad joke"
-bot = Bot(token=os.getenv('dadjokebot'))
+bot = Bot("5455196872:AAE2QxHiVcSv96VzdbhlinTGxLQSaFqdS74")
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
@@ -14,7 +14,6 @@ async def start(message: types.Message):
 @dp.message_handler()
 async def dadjoke(message: types.Message):
     """Send the dad joke."""
-    print("HERE")
     if dad_message(message.text):
         await message.reply(dad_text())
     else:
